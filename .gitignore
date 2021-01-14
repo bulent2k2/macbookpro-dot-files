@@ -1,6 +1,7 @@
 .A_screen_capture/
 .CFUserTextEncoding
 .DS_Store
+.Trash/
 .ammonite/cache/
 .ammonite/history
 .ammonite/rt-11.0.8.jar
@@ -33,7 +34,8 @@
 .zsh_sessions/
 Applications/
 Desktop/
-File.txt
+Documents/
+Downloads/
 Library/
 Movies/
 Music/
