@@ -1,0 +1,13 @@
+(find-file "~/.emacs.d/myfiles.el")
+(find-file "~/src/script/now.sc")
+(find-file "~/src/script/predef.sc")
+(find-file "~/.emacs")
+;;(find-file "~/.emacs.d/init.el" t)
+;; packages seem to be loaded only after init, so don't load .scala file here
+(find-file "/Users/ben/src/sample-project/src/main/scala/example")
+(find-file "~/src/kojo/git/README_my_files")
+(find-file "~/src/kojo/git/kojo/src/main/scala/net/kogics/kojo/lite/i18n/trInit.scala")
+(find-file-other-window "~/Desktop/now")
+(switch-to-buffer "now" nil (quote force-same-window))
+(find-file "~/src/kojo/git/kojo/src/main/resources/samples/tr/scala-tutorial.kojo")
+;;(org-mode)

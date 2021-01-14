@@ -1,0 +1,9 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Ben Bulent Basaran
+	email = ben@scala.org
+# Please adapt and uncomment the following lines:
+#	name = Ben Bulent Basaran
+#	email = ben@scala.org
+[credential]
+	helper = osxkeychain

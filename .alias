@@ -1,0 +1,25 @@
+alias a=alias
+a sa='source ~/.alias'
+a ll='ls -l'
+#Now we have it in /Users/ben/.sdkman/candidates/scala/current/bin/scala
+#a scala='cd ~/src/sample-project; sbt console'
+a amm='/usr/local/bin/amm'
+
+a kojo_cd='cd /Users/ben/src/kojo/git/kojo'
+a kojo_cc='kojo_cd; ./sbt.sh clean package; cd -'
+a kojo_test='kojo_cd; ./sbt.sh test; cd -'
+a kojo_run='kojo_cd; ./sbt.sh run; cd -'
+a kojo=/Users/ben/src/kojo/git/kojo/Kojo-z/bin/kojo
+#a build='source /Users/ben/src/kojo/git/packageAndRun.sh'
+a build='source /Users/ben/bin/makeItAll.sh'
+
+a j=jobs
+a h=history
+
+# just basic safety!
+a rm='rm -i'
+a cp='cp -i'
+a mv='mv -i'
+
+a gd='git difftool --tool ~/bin/tkdiff'
+a gs='git status'
