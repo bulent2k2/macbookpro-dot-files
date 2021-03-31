@@ -21,5 +21,12 @@ a rm='rm -i'
 a cp='cp -i'
 a mv='mv -i'
 
-a gd='git difftool --tool ~/bin/tkdiff'
+#make sure ~/bin is in the path
+a gd='git difftool --tool=tkdiff'
 a gs='git status'
+
+# anonymous function with args
+# try: example a foo bar boo boo
+a example='(){ echo Your arg was $1 $2 $3. ;}'
+# recursive grep in src dir
+a sgrep='(){ grep -r $1 src/* ;}'

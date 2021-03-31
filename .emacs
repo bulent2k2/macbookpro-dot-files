@@ -1,5 +1,6 @@
 ;; See some of the stuff I did once and it seems we don't need to re-do them as they are remembered somehow: ~/.emacs.d/init.el
-
+;; YouTube: Emacs From Scratch #1 - Getting Started with a Basic Usable Configuration
+;; https://github.com/daviwil/dotfiles/blob/master/Emacs.org#better-completions-with-ivy
 ;; also see: ~/defter/.emacs
 
 (message "Are we here? .emacs")
@@ -9,7 +10,7 @@
 (tool-bar-mode -1)
 (tooltip-mode -1)
 (set-fringe-mode 10)
-(menu-bar-mode -1)
+;; (menu-bar-mode -1)
 (setq visible-bell t)
 (set-face-attribute 'default nil :font "Monaco" :height 160)
 ;(load-theme 'tango-dark)
@@ -55,11 +56,18 @@
   :config
   (ivy-mode 1))
 
+;; https://github.com/hvesalai/emacs-scala-mode
+(use-package scala-mode
+  :interpreter
+    ("scala" . scala-mode))
+
 ;(ido-mode 't)
 (global-set-key "o" (quote other-frame))
 (global-set-key "c" (quote find-file-at-point))
 (global-set-key "" (quote compare-windows))
-(global-set-key "g" (quote goto-line))
+; Ctrl-g is for magit-status
+;(global-set-key "c" (quote goto-line))
+(global-set-key "g" (quote magit-status))
 
 ;; used to be: (quoted-insert ARG)
 ;; (global-set-key "" (quote quoted-insert))
@@ -76,6 +84,10 @@
 
 (fset 'bb-send-cmd-to-other-buf
       [?\C-  ?\C-e escape ?w ?\C-x ?o ?\C-y return ?\C-x ?o ?\C-x ?\C-x ?\C-n])
+;; assumes the two windows are dired (does a g in each before and after)
+(fset 'bb-rerun-last-command-two-windows
+   (kmacro-lambda-form [?g escape ?! escape ?p ?\C-e return ?g ?\C-x ?o ?g ?s escape ?< ?\C-x ?o ?g] 0 "%d"))
+
 (defun bb-load-myfiles ()
   "Load my favorite files"
   (interactive)
@@ -83,6 +95,7 @@
 
 ;;used to be ido-insert-file:
 (global-set-key "i" (quote bb-send-cmd-to-other-buf))
+(global-set-key "ı" (quote bb-send-cmd-to-other-buf))
 ;;used to be set-fill-column
 (global-set-key "f" (quote bb-load-myfiles))
 ;; used to be ido-list-directory

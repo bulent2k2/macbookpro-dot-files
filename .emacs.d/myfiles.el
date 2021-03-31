@@ -1,4 +1,6 @@
 (find-file "~/.emacs.d/myfiles.el")
+(find-file "~/src/kojo/git/README_my_files")
+(find-file "~/Desktop/today")
 (find-file "~/src/script/now.sc")
 (find-file "~/src/script/predef.sc")
 (find-file "~/.emacs")
